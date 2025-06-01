@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta lang="en">
+    <meta charset="UTF-8">
+    <title>cruds</title>
+    <link rel="stylesheet" href="curds.css"></link>
+</head>
+<body>
+    <div class="cruds">
+        <div class="head">
+            <h1>cruds</h1>
+            <h3>product management System</h3>
+        </div>
+        <div class="inp">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes." id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads." id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small id="total" ></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">Creat</button>
+        </div>
+        <div class="outp">
+            <div class="search">
+                <input onkeyup="searching(this.value)" type="text" placeholder="search" id="search">
+                <div class="searchby">
+                    <button onclick="searchBy(this.id)" id="sbt">Search By Title</button>
+                    <button onclick="searchBy(this.id)" id="sbc">Search By Category</button>
+                </div>
+            </div>
+        </div>
+        <div id="deletall">
+
+        </div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <script src="curds.js"></script>
+</body>
+</html>
