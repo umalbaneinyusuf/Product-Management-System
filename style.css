@@ -96,3 +96,20 @@ th, td {
 td {
     color: #F7F7FF;
 }
+@media screen and (max-width: 768px) {
+    .cruds {
+        width: 95%;
+        margin: 10px auto;
+    }
+    .price {
+        flex-direction: column;
+    }
+    .searchby {
+        flex-direction: column;
+        gap: 10px;
+    }
+    input, button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
