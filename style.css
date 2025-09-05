@@ -1,90 +1,98 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #002700;
-    color: white;
-    font-family:'Times New Roman';
+body {
+    background-color: #00001C;
+    color: #F7F7FF;
+    font-family: 'Times New Roman';
 }
-.cruds{
+.cruds {
     width: 80%;
     margin: auto;
 }
-.head{
+.head {
     text-align: center;
     text-transform: uppercase;
-    padding: 10px;
-    margin: 5px;
+    padding: 20px;
+    margin: 4px;
+    color: #00FF8B; 
 }
-input{
+input {
     width: 100%;
     height: 30px;
     border: none;
     outline: none;
     margin: 4px 0;
-    background-color: #001400;
-    color: white;
+    background: linear-gradient(135deg, #00001C, #1a1a40);
+    color: #F7F7FF;
     border-radius: 4px;
     padding: 3px;
     transition: 0.2s;
 }
-input:focus{
-    background-color: #000000;
-    transform: scale(1.1);
+input:focus {
+    background: #6765EC;
 }
-.price{
+.price {
     width: 100%;
     display: flex;
     gap: 3px;
 }
-#total{
-    background-color: #14ff14;
+#total {
+    background: linear-gradient(90deg, #00FF8B, #6765EC); 
     height: 25px;
     margin: 5px 0;
-    padding: 3px;
+    padding: 3px 8px;
     border-radius: 4px;
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    color: #00001C;
 }
-#total::before{
+#total::before {
     content: 'Total: ';
+    font-weight: bold;
 }
-button{
+button {
     width: 100%;
-    height: 30px;
+    height: 35px;
     border: none;
     outline: none;
     margin: 4px 0;
-    background-color: #14ff14;
-    color: white;
+    background: linear-gradient(135deg, #00FF8B, #6765EC); 
+    color: #00001C;
+    font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.4s;
 }
-button:hover{
-    background: #00c500;
+button:hover {
+    background: linear-gradient(135deg, #6765EC, #00FF8B);
     letter-spacing: 1px;
+    transform: translateY(-2px);
 }
-.searchby{
+.searchby {
     display: flex;
     gap: 25px;
     width: 100%;
 }
-table{
+table {
     width: 100%;
     text-align: center;
     margin: 10px 0;
+    border-collapse: collapse;
 }
-table th{
+table th {
     text-transform: uppercase;
-    font-weight: 50;
+    font-weight: 600;
+    background: #6765EC;
+    color: #F7F7FF;
+    padding: 8px;
 }
-th,td{
-    padding: 5px;
+th, td {
+    padding: 6px;
+    border-bottom: 1px solid #00FF8B;
 }
-/* #14ff14 green light eeee
- #00c500 green hover
- #002700 darke bc
- #001400 darker inbc
-*/
-
+td {
+    color: #F7F7FF;
+}
