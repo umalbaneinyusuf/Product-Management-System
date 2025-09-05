@@ -6,10 +6,14 @@ body {
     background-color: #00001C;
     color: #F7F7FF;
     font-family: 'Times New Roman';
+    font-size: 16px; /* حجم خط واضح للهاتف */
+    line-height: 1.4;
 }
 .cruds {
-    width: 80%;
+    width: 95%;
+    max-width: 480px; /* أقصى عرض لتناسب الهواتف */
     margin: auto;
+    padding: 10px;
 }
 .head {
     text-align: center;
@@ -20,14 +24,15 @@ body {
 }
 input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border: none;
     outline: none;
-    margin: 4px 0;
+    margin: 6px 0;
     background: linear-gradient(135deg, #00001C, #1a1a40);
     color: #F7F7FF;
     border-radius: 4px;
-    padding: 3px;
+    padding: 8px;
+    font-size: 16px;
     transition: 0.2s;
 }
 input:focus {
@@ -36,18 +41,20 @@ input:focus {
 .price {
     width: 100%;
     display: flex;
-    gap: 3px;
+    flex-direction: column; /* عمودي لتناسب الهواتف */
+    gap: 10px;
 }
 #total {
     background: linear-gradient(90deg, #00FF8B, #6765EC); 
-    height: 25px;
-    margin: 5px 0;
-    padding: 3px 8px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px 12px;
     border-radius: 4px;
     display: inline-flex;
     align-items: center;
     font-weight: bold;
     color: #00001C;
+    font-size: 16px;
 }
 #total::before {
     content: 'Total: ';
@@ -55,15 +62,16 @@ input:focus {
 }
 button {
     width: 100%;
-    height: 35px;
+    height: 45px;
     border: none;
     outline: none;
-    margin: 4px 0;
+    margin: 6px 0;
     background: linear-gradient(135deg, #00FF8B, #6765EC); 
     color: #00001C;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
+    font-size: 16px;
     transition: 0.4s;
 }
 button:hover {
@@ -73,43 +81,51 @@ button:hover {
 }
 .searchby {
     display: flex;
-    gap: 25px;
+    flex-direction: column; /* عمودي لتناسب الهواتف */
+    gap: 15px;
     width: 100%;
 }
 table {
     width: 100%;
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0;
     border-collapse: collapse;
+    font-size: 16px; /* توضيح أكبر للنص */
 }
 table th {
     text-transform: uppercase;
     font-weight: 600;
     background: #6765EC;
     color: #F7F7FF;
-    padding: 8px;
+    padding: 12px;
 }
 th, td {
-    padding: 6px;
+    padding: 10px;
     border-bottom: 1px solid #00FF8B;
 }
 td {
     color: #F7F7FF;
 }
-@media screen and (max-width: 768px) {
+
+/* وسائط استعلام لضبط الحجوم أكثر على الشاشات الصغيرة */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
     .cruds {
-        width: 95%;
-        margin: 10px auto;
+        width: 100%;
+        padding: 8px;
     }
-    .price {
-        flex-direction: column;
-    }
-    .searchby {
-        flex-direction: column;
-        gap: 10px;
+    #total {
+        font-size: 14px;
+        height: 28px;
+        padding: 4px 10px;
     }
     input, button {
-        width: 100%;
-        font-size: 1rem;
+        font-size: 14px;
+        height: 38px;
+    }
+    table {
+        font-size: 14px;
     }
 }
